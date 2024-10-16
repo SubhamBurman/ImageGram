@@ -1,4 +1,5 @@
 import express from 'express';
+import connectDB from './config/dbConfig.js';
 
 const PORT = 3000;
 
@@ -23,5 +24,6 @@ app.delete('/delete', (req,res)=>{
 
 app.listen(PORT, ()=>{
     console.log(`The server is running on PORT : ${PORT}`);
+    connectDB();
 
 })
